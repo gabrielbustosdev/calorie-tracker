@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# Calorie Tracker - Seguidor de Calorías
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación para registrar actividades físicas y alimenticias, realizando seguimiento de calorías consumidas y quemadas.
 
-Currently, two official plugins are available:
+## Características Principales
+- Registro de actividades con nombre, categoría (comida/ejercicio) y calorías
+- Cálculo en tiempo real de calorías netas
+- Persistencia de datos en localStorage
+- CRUD completo de actividades
+- Validación de formularios
+- Diseño responsive con Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tecnologías Utilizadas
+- React 18 + Vite
+- TypeScript
+- Tailwind CSS (Estilos)
+- Heroicons (Iconos)
+- UUID (Generación de IDs)
+- Context API + useReducer (Gestión de estado)
 
-## Expanding the ESLint configuration
+## 📦 Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clonar repositorio
+```bash
+git clone https://github.com/tu-usuario/calorie-tracker.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Instalar dependencias
+```bash
+npm install
 ```
+
+3. Ejecutar aplicación
+```bash
+npm run dev
+```
+
+
+## Gestión de Estado
+La aplicación utiliza la combinación de **Context API** y **useReducer** para manejar el estado global:
+- `ActivityContext`: Provee el estado a toda la aplicación
+- `activityReducer`: Maneja las acciones para actualizar el estado
+- Acciones disponibles: 
+  - Guardar/Editar actividades
+  - Eliminar actividades
+  - Reiniciar aplicación
+  - Activar actividad para edición
