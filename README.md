@@ -2,6 +2,10 @@
 
 Aplicación para registrar actividades físicas y alimenticias, realizando seguimiento de calorías consumidas y quemadas.
 
+## 🚀 Demo
+Puedes ver la aplicación en funcionamiento aquí: [Demo Calorie Tracker](https://phenomenal-truffle-2fdc16.netlify.app/)
+
+
 ## Características Principales
 - Registro de actividades con nombre, categoría (comida/ejercicio) y calorías
 - Cálculo en tiempo real de calorías netas
